@@ -33,7 +33,7 @@
 <tr id="backup<?=$row['id'];?>">
 <td><?=$row['id'];?></td>
 <td><?=$row['name'];?></td>
-<td><? if($row['type'] == 'database'):?>База данных<? elseif($row['type'] == 'files'):?>Файлы<?php endif;?></td>
+<td><? if($row['type'] == 'database'):?>База данных<? else if($row['type'] == 'files'):?>Файлы<?php end;?></td>
 <td style="text-align: right;">
 <a href="#" onclick="remove(<?=$row['id'];?>); return false;" class="text-muted" title="Удалить"><i class="fa fa-trash"></i></a>
 <a href="/<?php echo $row['hash'];?>" class="text-muted" title="Скачать" target="_blank"><i class="fa fa-save"></i></a>
